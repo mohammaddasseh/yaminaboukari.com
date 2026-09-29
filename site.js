@@ -1,5 +1,5 @@
 // Shared nav, footer, helpers
-(function () {
+if (typeof document !== "undefined") (function () {
   const page = document.body.dataset.page;
   const L = SITE.links;
   const nav = document.createElement("nav");
