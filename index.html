@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Yamina Boukari</title>
+<meta name="description" content="Dr Yamina Boukari — applied health data scientist researching migrant health and health inequalities at the University of Oxford.">
+</head>
+<body data-page="home">
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Bennett Institute · University of Oxford</span>
+    <h1 class="serif">Rethinking how people and health are <em>represented</em> in data.</h1>
+    <p class="lead">I'm Yamina Boukari, a Research Fellow in Applied Health Data Science. I use electronic health records and administrative data to understand the health needs of migrants and other socially excluded groups.</p>
+    <div class="btns">
+      <a class="btn primary" href="publications.html">Browse publications →</a>
+      <a class="btn" href="about.html">About me</a>
+      <a class="btn" href="mailto:yamina.boukari@jesus.ox.ac.uk">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section style="padding-top:0">
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div><p class="kicker">Research</p><h2>What I work on</h2></div></div>
+    <div class="grid g3">
+      <div class="card lift reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+        <h3>Migration &amp; health data</h3>
+        <p>Building reusable methods to identify migration status in NHS records via OpenSAFELY, including work on 24 million people in England and the open-source OpenCodeCounts tool.</p>
+      </div>
+      <div class="card lift reveal">
+        <div class="icon" style="color:var(--t-covid);background:color-mix(in srgb,var(--t-covid) 12%,transparent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5M5 5l3.5 3.5M15.5 15.5 19 19M5 19l3.5-3.5M15.5 8.5 19 5"/></svg></div>
+        <h3>COVID-19 &amp; migrants</h3>
+        <p>Infection, hospitalisation, vaccination and primary care use among migrants during the pandemic, using CPRD and the Virus Watch cohort.</p>
+      </div>
+      <div class="card lift reveal">
+        <div class="icon" style="color:var(--t-justice);background:color-mix(in srgb,var(--t-justice) 12%,transparent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 0 0 6 0L5 7ZM19 7l-3 7a3 3 0 0 0 6 0l-3-7ZM8 21h8"/></svg></div>
+        <h3>Racism, conflict &amp; policy</h3>
+        <p>The wider determinants of health: xenophobic health-system policies, Islamophobia, border pushbacks and the impact of armed conflict on children.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="band reveal">
+      <p>Open, reproducible methods so any analyst can study migrant health in NHS data.</p>
+      <small>The aim of my Bennett fellowship, built on the OpenSAFELY platform.</small>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div><p class="kicker">Highlights</p><h2>Selected publications</h2></div><a class="link" href="publications.html">All publications →</a></div>
+    <div class="grid g2" id="featured"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div><p class="kicker">Output</p><h2>Publications by year</h2></div><span class="count">Journal articles, preprints, commentaries &amp; abstracts</span></div>
+    <div class="card"><div class="bars" id="bars"></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div><p class="kicker">Writing</p><h2>From the Bennett Institute blog</h2></div><a class="link" href="https://www.bennett.ox.ac.uk/about-us/yamina-boukari/" target="_blank" rel="noopener">View on Bennett →</a></div>
+    <div class="grid g3">
+      <a class="card reveal" href="https://www.bennett.ox.ac.uk/about-us/yamina-boukari/" target="_blank" rel="noopener"><div class="meta">June 2026</div><h3>Making health inequalities visible: how big data exposes health inequalities in migrant communities</h3></a>
+      <a class="card reveal" href="https://www.bennett.ox.ac.uk/about-us/yamina-boukari/" target="_blank" rel="noopener"><div class="meta">April 2026</div><h3>Migration coding in primary care from 2011 to 2025 using the new OpenCodeCounts tool</h3></a>
+      <a class="card reveal" href="https://www.bennett.ox.ac.uk/about-us/yamina-boukari/" target="_blank" rel="noopener"><div class="meta">December 2024</div><h3>Have your say on migrant health research in OpenSAFELY</h3></a>
+    </div>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+(() => {
+  const S = SITE.stats, P = SITE.pubs;
+  const first = P.filter(isFirst).length;
+  document.getElementById("stats").innerHTML = [
+    [S.citations, "Citations"], [S.hIndex, "h-index"], [P.length, "Research outputs"], [first, "First-authored"]
+  ].map(([n, l]) => `<div class="stat reveal"><b data-n="${n}">0</b><span>${l}</span></div>`).join("");
+  document.querySelectorAll("[data-n]").forEach(el => {
+    const n = +el.dataset.n, t0 = performance.now();
+    const step = t => { const k = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+  document.getElementById("featured").innerHTML = P.filter(p => p.featured).map(pubCard).join("");
+  const years = {}; P.forEach(p => years[p.y] = (years[p.y] || 0) + 1);
+  const ys = Object.keys(years).map(Number); const min = Math.min(...ys), max = Math.max(...ys);
+  const top = Math.max(...Object.values(years)); let html = "";
+  for (let y = min; y <= max; y++) { const n = years[y] || 0; html += `<div class="bar" title="${n} in ${y}"><em>${n || ""}</em><i style="height:${n / top * 100}%"></i><span>'${String(y).slice(2)}</span></div>`; }
+  document.getElementById("bars").innerHTML = html;
+  observeReveal();
+})();
+</script>
+</body>
+</html>
